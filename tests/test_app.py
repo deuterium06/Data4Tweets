@@ -4,7 +4,7 @@ import unittest
 import sys, os
 sys.path.append('../')
 
-import app
+import app.app
 
 class Test(unittest.TestCase):
 
