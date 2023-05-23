@@ -1,5 +1,5 @@
 import unittest
-from Data4Tweets.tweets.data4tweets import Data4Tweets
+from tweets.data4tweets import Data4Tweets
 
 class Test(unittest.TestCase):
 

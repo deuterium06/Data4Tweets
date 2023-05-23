@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, make_response, jsonify
-from Data4Tweets.tweets.trendingpokemon import TrendingPokemon
+from tweets.trendingpokemon import TrendingPokemon
 
 app = Flask(__name__, template_folder='frontend/templateFiles', static_folder='frontend/staticFiles')
 

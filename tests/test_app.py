@@ -4,7 +4,7 @@ import unittest
 import sys, os
 sys.path.append('../')
 
-from Data4Tweets.app import app
+from app import app
 
 class Test(unittest.TestCase):
 
