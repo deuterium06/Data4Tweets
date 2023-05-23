@@ -20,6 +20,7 @@ jobs:
             export FLASK_ENV=development
             echo $PYTHONPATH
             echo $PWD
+            tree
           environment:
             PYTHONPATH: /home/circleci/project
 
@@ -29,6 +30,8 @@ jobs:
           command: |
             . data4tweets-env/bin/activate
             pytest
+          environment:
+            PYTHONPATH: /home/circleci/project
 
 workflows:
   build-and-test:
