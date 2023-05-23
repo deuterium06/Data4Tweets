@@ -14,17 +14,23 @@ jobs:
       - run:
           name: Install dependencies
           command: |
-            set FLASK_APP=app
-            set FLASK_ENV=development
             python -m venv data4tweets-env
-            . data4tweets-env/bin/activate 
+            . data4tweets-env/bin/activate
+            export FLASK_APP=app
+            export FLASK_ENV=development
+            echo $PYTHONPATH
+            echo $PWD
+          environment:
+            PYTHONPATH: /home/circleci/project
 
       # Run tests
       - run:
           name: Run tests
           command: |
             . data4tweets-env/bin/activate
-            python -m unittest tests.test_app tests.test_data4tweets
+            pytest
+          environment:
+            PYTHONPATH: /home/circleci/project
 
 workflows:
   build-and-test:
