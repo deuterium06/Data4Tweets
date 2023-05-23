@@ -19,13 +19,14 @@ jobs:
             export FLASK_APP=app
             export FLASK_ENV=development
             export PYTHONPATH=$PWD
+            echo $PWD
 
       # Run tests
       - run:
           name: Run tests
           command: |
             . data4tweets-env/bin/activate
-            python -m unittest tests.test_app tests.test_data4tweets
+            pytest
 
 workflows:
   build-and-test:
