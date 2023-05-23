@@ -1,0 +1,32 @@
+version: 2.1
+orbs:
+  python: circleci/python@2.1.1
+
+jobs:
+  build_and_test:
+    executor: python/default
+    steps:
+      - checkout
+      - python/install-packages:
+          pkg-manager: pip
+          pip-dependency-file: requirements.txt
+      # Install dependencies
+      - run:
+          name: Install dependencies
+          command: |
+            set FLASK_APP=app
+            set FLASK_ENV=development
+            python -m venv data4tweets-env
+            . data4tweets-env/bin/activate 
+
+      # Run tests
+      - run:
+          name: Run tests
+          command: |
+            . data4tweets-env/bin/activate
+            pytest
+
+workflows:
+  build-and-test:
+    jobs:
+      - build_and_test

@@ -1,0 +1,72 @@
+/* Body styles */
+body {
+    background-color: #e0f2f1;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+/* Heading styles */
+h1 {
+    color: #4caf50;
+    text-align: center;
+    padding-top: 50px;
+}
+
+/* Form styles */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #4caf50;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+h2 {
+    color: #4caf50;
+    text-align: center;
+    margin-top: 20px;
+}
+
+p {
+    color: #4caf50;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* CSS styles for the footer */
+footer {
+    background-color: #f2f2f2;
+    padding: 20px 0;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}

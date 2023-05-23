@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/staticFiles/style.css">
+    <title>Trending Pokemon</title>
+</head>
+<body>
+    <h1>Trending Pokemon</h1>
+    <p>Is your pokemon trending? See how popular they are on Twitter by checking their tweet counts.</p>
+    <form action="/search" method="POST">
+        <label for="name">Enter Pokemon Name:</label>
+        <input type="text" id="name" name="name" required>
+        <input type="submit" value="Generate">
+    </form>
+    {% if generate %}
+        <h2>{{ generate }}</h2>
+    {% endif %}
+</body>
+<footer>
+    <div class="container">
+        <p>Data is sourced from Twitter Dev API v2.</p>
+    </div>
+</footer>
+</html>

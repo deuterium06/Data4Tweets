@@ -1,0 +1,11 @@
+/*.yml
+/*.cmake
+/*.DS_Store
+/.user
+/build
+/*env
+/*data4tweets-env
+/*.csv
+__pycache__
+/*.bat
+/*.pytest_cache
