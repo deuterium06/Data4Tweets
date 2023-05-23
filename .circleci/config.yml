@@ -20,6 +20,8 @@ jobs:
             export FLASK_ENV=development
             export PYTHONPATH=$PWD
             echo $PWD
+          environment:
+            PYTHONPATH: /home/circleci/project
 
       # Run tests
       - run:
