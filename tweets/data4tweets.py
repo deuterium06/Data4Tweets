@@ -2,8 +2,8 @@ import pandas as pd
 import requests
 import yaml
 import os
-from .utils.helper import searchTweetParser
-from .utils.constant import DEV_ENV, TEST_ENV
+from tweets.utils.helper import searchTweetParser
+from tweets.utils.constant import DEV_ENV, TEST_ENV
 
 ENV = os.getenv('ENV')
 
