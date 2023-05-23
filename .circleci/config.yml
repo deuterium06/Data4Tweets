@@ -24,7 +24,7 @@ jobs:
           name: Run tests
           command: |
             . data4tweets-env/bin/activate
-            pytest
+            python -m unittest
 
 workflows:
   build-and-test:
