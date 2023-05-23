@@ -20,7 +20,6 @@ jobs:
             export FLASK_ENV=development
             echo $PYTHONPATH
             echo $PWD
-            tree
           environment:
             PYTHONPATH: /home/circleci/project
 
