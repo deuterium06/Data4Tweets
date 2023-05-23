@@ -18,7 +18,7 @@ jobs:
             . data4tweets-env/bin/activate
             export FLASK_APP=app
             export FLASK_ENV=development
-            echo PYTHONPATH
+            echo $PYTHONPATH
             echo $PWD
           environment:
             PYTHONPATH: /home/circleci/project
