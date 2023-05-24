@@ -3,7 +3,7 @@ import requests
 import yaml
 import os
 from tweets.utils.helper import searchTweetParser
-from tweets.utils.constant import DEV_ENV, TEST_ENV
+from tweets.utils.constant import LOCAL_ENV, CI_ENV
 
 ENV = os.getenv('ENV')
 
@@ -13,7 +13,7 @@ class Data4Tweets:
         self.query = query
         self.__creds = {}
 
-        if ENV == TEST_ENV:
+        if ENV == CI_ENV:
             
             self.__creds = {'bearer': str(os.environ.get('BEARER'))}
 
