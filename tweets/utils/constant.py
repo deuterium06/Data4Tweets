@@ -1,5 +1,5 @@
 # Environment
 
 PROD_ENV = 'PROD'
-DEV_ENV = 'DEV'
-TEST_ENV = 'TEST'
+LOCAL_ENV = 'DEV'
+CI_ENV = 'CI'
